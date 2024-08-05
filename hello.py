@@ -1,4 +1,4 @@
-var=
+var=1
 var=var
 
 def toyou(x):
