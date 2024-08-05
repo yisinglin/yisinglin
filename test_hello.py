@@ -1,46 +1,17 @@
-"""
-This module contains test cases for the hello module.
-"""
+import pytest
+from main import add_numbers, multiply_numbers, greet, is_palindrome
 
-from hello import toyou, add, subtract
+def test_add_numbers():
+    assert add_numbers(2, 3) == 5
+    assert add_numbers(-1, 1) == 0
 
-class TestHello:
-    def setup_method(self, method):
-        """
-        Setup method to initialize test conditions.
-        
-        Args:
-        method (method): The test method.
-        """
-        print(f" Running Setup: {method.__name__}")
-        self.x = 10
+def test_multiply_numbers():
+    assert multiply_numbers(2, 3) == 6
+    assert multiply_numbers(-2, 3) == -6
 
-    def teardown_method(self, method):
-        """
-        Teardown method to clean up after tests.
-        
-        Args:
-        method (method): The test method.
-        """
-        print(f" Running Teardown: {method.__name__}")
-        del self.x
+def test_greet():
+    assert greet("Alice") == "Hello, Alice!"
+    assert greet("Bob") == "Hello, Bob!"
 
-    def test_hello_toyou(self):
-        """
-        Test case for toyou function.
-        """
-        assert toyou("test") == "hi test", "Failed test_hello_toyou"
-
-    def test_hello_add(self):
-        """
-        Test case for add function.
-        """
-        assert add(self.x) == 11, "Failed test_hello_add"
-
-    def test_hello_subtract(self):
-        """
-        Test case for subtract function.
-        """
-        assert subtract(self.x) == 9, "Failed test_hello_subtract"
-
-# Note: No need to explicitly call test functions; a test runner like pytest will handle this.
+if __name__ == "__main__":
+    pytest.main()
