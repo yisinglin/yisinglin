@@ -1,39 +1,13 @@
-"""
-This module contains simple functions for demonstration purposes.
-"""
+def add_numbers(a, b):
+    return a + b
 
-def toyou(x):
-    """
-    Returns a greeting string.
-    
-    Args:
-    x (str): The name to greet.
-    
-    Returns:
-    str: A greeting string.
-    """
-    return f"hi {x}"
+def multiply_numbers(a, b):
+    return a * b
 
-def add(x):
-    """
-    Adds 1 to the input number.
-    
-    Args:
-    x (int): The number to be incremented.
-    
-    Returns:
-    int: The incremented number.
-    """
-    return x + 1
+def greet(name):
+    return f"Hello, {name}!"
 
-def subtract(x):
-    """
-    Subtracts 1 from the input number.
-    
-    Args:
-    x (int): The number to be decremented.
-    
-    Returns:
-    int: The decremented number.
-    """
-    return x - 1
+if __name__ == "__main__":
+    print(add_numbers(5, 3))
+    print(multiply_numbers(4, 2))
+    print(greet("World"))
