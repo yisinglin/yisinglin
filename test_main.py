@@ -1,5 +1,5 @@
 import pytest
-from main import add_numbers, multiply_numbers, greet, is_palindrome
+from main import add_numbers, multiply_numbers, greet
 
 def test_add_numbers():
     assert add_numbers(2, 3) == 5
